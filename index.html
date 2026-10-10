@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mindful Spaces</title>
+<meta name="description" content="Mindful Spaces – Kommunikation, Selbstentwicklung und stille Ästhetik.">
+<style>
+:root{--bg:#f8f5ef;--ink:#2f2a26;--muted:#746b62;--line:#d8cec1;--accent:#a45f48}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:linear-gradient(#fbf8f2,#f6f1e9);color:var(--ink);font-family:Georgia,"Times New Roman",serif}
+a{text-decoration:none;color:inherit}.shell{max-width:1500px;margin:auto;padding:0 28px}
+header{min-height:92px;display:flex;align-items:center;justify-content:space-between;gap:28px;border-bottom:1px solid var(--line)}
+.brand{font:22px/1 Arial,sans-serif;letter-spacing:.28em;white-space:nowrap}
+nav{display:flex;gap:32px;font-size:15px;align-items:center}nav a{opacity:.8}nav a:hover{color:var(--accent);opacity:1}
+.icons{font:20px Arial,sans-serif;display:flex;gap:18px}
+.hero{display:grid;grid-template-columns:1.2fr .86fr .86fr .86fr;min-height:820px;padding-top:42px}
+.intro{padding:50px 56px 40px 24px;display:flex;flex-direction:column;justify-content:center}
+.eyebrow{font:12px Arial,sans-serif;letter-spacing:.34em;text-transform:uppercase;color:var(--muted);margin-bottom:22px}
+h1{font-weight:400;font-size:clamp(64px,7vw,112px);line-height:.84;letter-spacing:-.045em;margin:0 0 28px}
+h1 em{display:block;color:var(--accent);font-weight:400;margin-top:14px}
+.lead{max-width:470px;font-size:22px;line-height:1.55;color:#514941;margin:0 0 34px}
+.cta{display:inline-flex;gap:18px;align-items:center;width:max-content;border:1px solid #655a50;border-radius:40px;padding:17px 28px;font:12px Arial,sans-serif;letter-spacing:.23em;text-transform:uppercase}
+.panel{border-left:1px solid var(--line);padding:0 14px 34px;display:flex;flex-direction:column;justify-content:flex-end}
+.arch{height:610px;border-radius:180px 180px 0 0;overflow:hidden;background:#ddd;box-shadow:0 12px 34px rgba(50,40,30,.06)}
+.arch img{width:100%;height:100%;object-fit:cover;display:block}.panel:nth-child(2) img{object-position:center center}.panel:nth-child(3) img{object-position:center center}.panel:nth-child(4) img{object-position:center center}
+.meta{padding:24px 4px 0}.num{font:12px Arial,sans-serif;letter-spacing:.18em;color:var(--muted);margin-bottom:12px}
+.meta h2{font-weight:400;font-size:24px;letter-spacing:.08em;text-transform:uppercase;margin:0 0 10px}.meta p{font-size:19px;line-height:1.45;color:#625951;margin:0}
+.poem{border-top:1px solid var(--line);min-height:180px;display:grid;grid-template-columns:1fr 1.6fr 1fr;align-items:center;gap:30px;margin-top:20px}
+.smallcap{font:11px/1.8 Arial,sans-serif;letter-spacing:.28em;text-transform:uppercase;color:var(--muted)}.quote{text-align:center;font-style:italic;font-size:36px;line-height:1.3}.right{text-align:right}
+@media(max-width:1100px){header{padding:22px 0;flex-wrap:wrap}.hero{grid-template-columns:1fr 1fr;min-height:auto}.intro{grid-column:1/-1;padding:54px 20px}.panel{border-left:0;border-top:1px solid var(--line);padding-top:22px}.panel:last-child{grid-column:1/-1;max-width:50%;justify-self:center;width:100%}.arch{height:520px}}
+@media(max-width:720px){.shell{padding:0 18px}.brand{font-size:17px}nav{order:3;width:100%;overflow:auto;gap:22px;padding-bottom:4px}.hero{display:block}.intro{padding:42px 6px}h1{font-size:66px}.lead{font-size:20px}.panel,.panel:last-child{max-width:none;width:100%;padding:22px 0 36px}.arch{height:560px;border-radius:150px 150px 0 0}.poem{grid-template-columns:1fr;text-align:center;padding:36px 0}.right{text-align:center}.quote{font-size:30px}}
+</style>
+</head>
+<body>
+<div class="shell">
+<header>
+  <div class="brand">MINDFUL SPACES</div>
+  <nav>
+    <a href="#kommunikation">Kommunikation</a>
+    <a href="#selbstentwicklung">Selbstentwicklung</a>
+    <a href="#deko">Deko</a>
+    <a href="#produkte">Alle Produkte</a>
+    <a href="#ueber-uns">Über uns</a>
+  </nav>
+  <div class="icons"><span>⌕</span><span>♡</span><span>▢</span></div>
+</header>
+
+<main class="hero">
+  <section class="intro">
+    <div class="eyebrow">Für bewusste Momente</div>
+    <h1>Leise Schönheit.<em>Tiefe Wirkung.</em></h1>
+    <p class="lead">Inspiration für ein bewussteres Leben – in Gedanken, Begegnungen und den Dingen, die uns umgeben.</p>
+    <a class="cta" href="#kommunikation">Kollektion entdecken <span>→</span></a>
+  </section>
+
+  <section class="panel" id="kommunikation">
+    <div class="arch"><img src="https://storage.googleapis.com/web-api-media-uploads/media/large_tmpq17dm5qw_5ed9d3ebab/large_tmpq17dm5qw_5ed9d3ebab.png" alt="Heller Tisch mit Journal und zwei Tassen"></div>
+    <div class="meta"><div class="num">01</div><h2>Verbindung</h2><p>Für Gespräche, die bleiben.</p></div>
+  </section>
+
+  <section class="panel" id="selbstentwicklung">
+    <div class="arch"><img src="https://images.squarespace-cdn.com/content/v1/673776e8f55fd72f60813df1/67bcc33b-93ee-4a57-aa14-61e3b5e11140/silentia_003.jpg?format=1500w" alt="Helle minimalistische Dünenlandschaft"></div>
+    <div class="meta"><div class="num">02</div><h2>Weite</h2><p>Wo Gedanken ruhiger werden und Neues beginnen darf.</p></div>
+  </section>
+
+  <section class="panel" id="deko">
+    <div class="arch"><img src="https://images.rawpixel.com/image_social_square/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI0LTAxL3dvcmxkZmFjZXNsYWJfYV9zdGlsbF9saWZlX3Bob3Rvc2hvdF9vZl9hX3BvdHRlcnlfYV9taW5pbWFsX29mZl9iMmY0ZjMyNy0zOWQ4LTQ0MTItYmFkMy04ZmU1Nzc1YjA2NjJfMS5qcGc.jpg" alt="Heller Raum mit einer einzelnen eleganten Vase"></div>
+    <div class="meta"><div class="num">03</div><h2>Stille</h2><p>Wo Schönheit nicht laut sein muss.</p></div>
+  </section>
+</main>
+
+<section class="poem">
+  <div class="smallcap">Wahre Eleganz<br>lebt in den leisen Dingen.</div>
+  <div class="quote">„Schönheit beginnt dort,<br>wo Ruhe einzieht.“</div>
+  <div class="smallcap right">Mindful living<br>everyday</div>
+</section>
+</div>
+</body>
+</html>
