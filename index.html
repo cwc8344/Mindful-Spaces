@@ -4,43 +4,170 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Mindful Spaces</title>
-<meta name="description" content="Mindful Spaces – Kommunikation, Selbstentwicklung und Deko für ein bewussteres Leben.">
+<meta name="description" content="Mindful Spaces – Kommunikation, Selbstentwicklung und stille Ästhetik.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#342f2b;--cream:#f7f3ec;--line:rgba(67,58,50,.18)}
+:root{
+  --cream:#f7f3ec;
+  --ink:#2d2926;
+  --muted:#736b64;
+  --line:#d8cfc4;
+  --accent:#a66b55;
+}
 *{box-sizing:border-box}
-html,body{margin:0;min-height:100%;background:var(--cream);color:var(--ink);font-family:Georgia,"Times New Roman",serif}
-a{color:inherit;text-decoration:none}
-header{height:70px;background:#f8f5ef;display:flex;align-items:center;justify-content:space-between;padding:0 4vw;border-bottom:1px solid var(--line);position:relative;z-index:5}
-.brand{font-family:Arial,sans-serif;font-size:18px;letter-spacing:.28em;white-space:nowrap}
-nav{display:flex;gap:3.5vw;align-items:center;font-size:13px;text-transform:uppercase;letter-spacing:.03em}
-.icons{display:flex;gap:18px;font-family:Arial,sans-serif;font-size:22px}
-.grid{display:grid;grid-template-columns:1fr 1.35fr 1fr;min-height:calc(100vh - 70px)}
-.card{position:relative;overflow:hidden;min-height:760px;background:#ddd;border-right:1px solid rgba(255,255,255,.7)}
-.card:last-child{border-right:none}
-.card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.card:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(25,20,17,.18),transparent 38%)}
-.center:after{background:linear-gradient(to bottom,rgba(255,255,255,.22),rgba(255,255,255,.08) 42%,rgba(26,24,22,.04))}
-.copy{position:absolute;z-index:2}
-.side-copy{left:6vw;bottom:9vh;max-width:290px;color:#2f2a26;text-shadow:0 1px 12px rgba(255,255,255,.34)}
-.side-copy h2{font-size:58px;line-height:1;font-weight:400;font-style:italic;margin:0 0 18px}
-.side-copy p{font-size:17px;line-height:1.55;letter-spacing:.08em;margin:0}
-.right-copy{left:auto;right:5vw;text-align:left}
-.center-copy{top:12vh;left:50%;transform:translateX(-50%);text-align:center;width:min(82%,720px);color:#302c29;text-shadow:0 1px 16px rgba(255,255,255,.36)}
-.center-copy .mini{font-family:Arial,sans-serif;letter-spacing:.32em;font-size:12px;margin-bottom:46px}
-.center-copy h1{font-weight:400;font-size:54px;line-height:1.08;margin:0 0 24px}
-.center-copy h1 em{font-weight:400;font-style:italic}
-.center-copy p{font-size:18px;line-height:1.55;margin:0 auto 28px;max-width:620px}
-.center-copy a{display:inline-block;border:1px solid #5b544e;padding:14px 26px;font-family:Arial,sans-serif;font-size:12px;letter-spacing:.18em;background:rgba(255,255,255,.18)}
+html,body{margin:0;min-height:100%;background:var(--cream);color:var(--ink)}
+body{font-family:"Cormorant Garamond",serif}
+a{text-decoration:none;color:inherit}
+
+header{
+  height:74px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:26px;
+  padding:0 3.8vw;
+  background:#faf7f1;
+  border-bottom:1px solid var(--line);
+}
+.brand{
+  font-family:"Montserrat",sans-serif;
+  letter-spacing:.30em;
+  font-size:16px;
+  white-space:nowrap;
+}
+nav{
+  display:flex;
+  gap:3.1vw;
+  align-items:center;
+  font-family:"Montserrat",sans-serif;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.02em;
+}
+.icons{display:flex;gap:16px;font-size:20px}
+
+.hero{
+  display:grid;
+  grid-template-columns:1fr 1.22fr 1fr;
+  min-height:calc(100vh - 74px);
+  background:#f4efe7;
+}
+.panel{
+  position:relative;
+  overflow:hidden;
+  min-height:760px;
+}
+.panel + .panel{
+  border-left:3px solid rgba(250,247,241,.96);
+  box-shadow:-1px 0 0 rgba(80,65,52,.10);
+}
+.panel img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+.panel::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+}
+.left::after,.right::after{
+  background:linear-gradient(to top,rgba(255,250,242,.55) 0,rgba(255,250,242,.08) 38%,rgba(255,255,255,0) 72%);
+}
+.center::after{
+  background:linear-gradient(to bottom,rgba(255,255,255,.33) 0,rgba(255,255,255,.08) 40%,rgba(0,0,0,.02) 100%);
+}
+
+.side-copy,.center-copy{
+  position:absolute;
+  z-index:2;
+}
+.side-copy{
+  bottom:7.5vh;
+  left:4vw;
+  max-width:330px;
+}
+.side-copy h2{
+  margin:0 0 14px;
+  font-size:56px;
+  line-height:.95;
+  font-weight:400;
+  font-style:italic;
+}
+.side-copy p{
+  margin:0;
+  font-family:"Montserrat",sans-serif;
+  font-size:12px;
+  line-height:1.85;
+  letter-spacing:.24em;
+  text-transform:uppercase;
+}
+.right-copy{
+  left:auto;
+  right:4.2vw;
+  text-align:left;
+}
+.center-copy{
+  top:7.8vh;
+  left:50%;
+  transform:translateX(-50%);
+  width:min(82%,680px);
+  text-align:center;
+}
+.center-copy .mini{
+  font-family:"Montserrat",sans-serif;
+  letter-spacing:.32em;
+  font-size:13px;
+  margin-bottom:20px;
+}
+.center-copy .rule{
+  width:66px;height:1px;background:#91887e;margin:0 auto 42px;
+}
+.center-copy h1{
+  margin:0 0 18px;
+  font-size:58px;
+  line-height:.96;
+  font-weight:400;
+}
+.center-copy h1 em{
+  display:block;
+  font-style:italic;
+  font-weight:400;
+  margin-top:8px;
+}
+.center-copy p{
+  margin:0 auto 22px;
+  max-width:610px;
+  font-size:18px;
+  line-height:1.45;
+}
+.center-copy a{
+  display:inline-block;
+  border:1px solid #6f665e;
+  padding:13px 24px;
+  font-family:"Montserrat",sans-serif;
+  font-size:11px;
+  letter-spacing:.19em;
+  background:rgba(250,247,241,.42);
+}
+
 @media(max-width:900px){
-header{height:auto;min-height:76px;flex-wrap:wrap;gap:15px;padding:20px}
-nav{order:3;width:100%;overflow:auto;gap:24px;padding-bottom:2px}
-.grid{grid-template-columns:1fr;min-height:auto}
-.card{min-height:82vh;border-right:none;border-bottom:1px solid rgba(255,255,255,.8)}
-.center{order:-1}
-.center-copy{top:10vh;width:86%}
-.center-copy h1{font-size:46px}
-.side-copy,.right-copy{left:8vw;right:auto;bottom:8vh}
-.side-copy h2{font-size:50px}
+  header{height:auto;min-height:80px;flex-wrap:wrap;padding:18px 22px}
+  nav{order:3;width:100%;overflow:auto;gap:22px;padding-bottom:4px}
+  .hero{grid-template-columns:1fr}
+  .panel{min-height:78vh}
+  .panel + .panel{border-left:0;border-top:3px solid rgba(250,247,241,.96)}
+  .center{order:-1}
+  .center-copy{top:8vh;width:88%}
+  .center-copy h1{font-size:46px}
+  .side-copy,.right-copy{left:8vw;right:auto;bottom:7vh}
+  .side-copy h2{font-size:48px}
 }
 </style>
 </head>
@@ -57,30 +184,31 @@ nav{order:3;width:100%;overflow:auto;gap:24px;padding-bottom:2px}
   <div class="icons"><span>⌕</span><span>♡</span><span>▢</span></div>
 </header>
 
-<main class="grid">
-  <section class="card" id="kommunikation">
-    <img src="https://storage.googleapis.com/web-api-media-uploads/media/large_tmpq17dm5qw_5ed9d3ebab/large_tmpq17dm5qw_5ed9d3ebab.png" alt="Heller Tisch mit zwei Tassen und Journal">
-    <div class="copy side-copy">
+<main class="hero">
+  <section class="panel left" id="kommunikation">
+    <img src="https://storage.googleapis.com/web-api-media-uploads/media/large_tmpq17dm5qw_5ed9d3ebab/large_tmpq17dm5qw_5ed9d3ebab.png" alt="Heller eleganter Tisch mit zwei Tassen und Schreibmaterial">
+    <div class="side-copy">
       <h2>Verbindung.</h2>
-      <p>Für Gespräche, die bleiben.</p>
+      <p>Für Gespräche,<br>die bleiben.</p>
     </div>
   </section>
 
-  <section class="card center" id="selbstentwicklung">
-    <img src="https://images.squarespace-cdn.com/content/v1/673776e8f55fd72f60813df1/67bcc33b-93ee-4a57-aa14-61e3b5e11140/silentia_003.jpg?format=1500w" alt="Helle Dünenlandschaft">
-    <div class="copy center-copy">
+  <section class="panel center" id="selbstentwicklung">
+    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=88" alt="Helle ruhige Küstenlandschaft">
+    <div class="center-copy">
       <div class="mini">MINDFUL SPACES</div>
-      <h1>Leise Schönheit.<br><em>Tiefe Wirkung.</em></h1>
-      <p>Inspiration für ein bewussteres Leben – in Gedanken, Begegnungen und den Dingen, die uns umgeben.</p>
+      <div class="rule"></div>
+      <h1>Leise Schönheit.<em>Tiefe Wirkung.</em></h1>
+      <p>Inspiration für ein bewussteres Leben –<br>in Gedanken, Begegnungen und den Dingen,<br>die uns umgeben.</p>
       <a href="#kommunikation">JETZT ENTDECKEN →</a>
     </div>
   </section>
 
-  <section class="card" id="deko">
-    <img src="https://images.rawpixel.com/image_social_square/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI0LTAxL3dvcmxkZmFjZXNsYWJfYV9zdGlsbF9saWZlX3Bob3Rvc2hvdF9vZl9hX3BvdHRlcnlfYV9taW5pbWFsX29mZl9iMmY0ZjMyNy0zOWQ4LTQ0MTItYmFkMy04ZmU1Nzc1YjA2NjJfMS5qcGc.jpg" alt="Heller Raum mit einer Vase">
-    <div class="copy side-copy right-copy">
+  <section class="panel right" id="deko">
+    <img src="https://images.rawpixel.com/image_social_square/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI0LTAxL3dvcmxkZmFjZXNsYWJfYV9zdGlsbF9saWZlX3Bob3Rvc2hvdF9vZl9hX3BvdHRlcnlfYV9taW5pbWFsX29mZl9iMmY0ZjMyNy0zOWQ4LTQ0MTItYmFkMy04ZmU1Nzc1YjA2NjJfMS5qcGc.jpg" alt="Heller eleganter Raum mit einer einzelnen Vase">
+    <div class="side-copy right-copy">
       <h2>Stille.</h2>
-      <p>Wo Schönheit nicht laut sein muss.</p>
+      <p>Wo Schönheit<br>nicht laut sein muss.</p>
     </div>
   </section>
 </main>
